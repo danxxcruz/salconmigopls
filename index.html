@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="question1" class="question">
+        <p>Would you go on a date with me?</p>
+        <button id="yesButton" class="yes-button">Yes</button>
+        <button id="noButton" class="moving-button no-button">No</button>
+    </div>
+    <div id="question2" class="question" style="display: none;">
+        <p>When are you free?</p>
+        <input type="date" id="datePicker" class="date-picker">
+        <button id="dateSelectButton" class="styled-button">Select Date</button>
+    </div>
+    <div id="question3" class="question" style="display: none;">
+        <p>When would you like to go?</p>
+        <div>
+            <img src="morning.jpg" alt="Morning">
+            <button value="Morning" class="styled-button">Morning</button>
+        </div>
+        <div>
+            <img src="afternoon.jpg" alt="Afternoon">
+            <button value="Afternoon" class="styled-button">Afternoon</button>
+        </div>
+        <div>
+            <img src="evening.jpg" alt="Evening">
+            <button value="Evening" class="styled-button">Evening</button>
+        </div>
+    </div>
+    <div id="question4" class="question" style="display: none;">
+        <p>What would you like to get?</p>
+        <div>
+            <img src="ice-cream.jpg" alt="Ice Cream">
+            <button value="Ice Cream" class="styled-button">Ice cream</button>
+        </div>
+        <div>
+            <img src="pizza.jpg" alt="Pizza">
+            <button value="Pizza" class="styled-button">Pizza</button>
+        </div>
+        <div>
+            <img src="tacos.jpg" alt="Tacos">
+            <button value="Tacos" class="styled-button">Tacos</button>
+        </div>
+        <div>
+            <img src="coffee.jpg" alt="Coffee">
+            <button value="Coffee" class="styled-button">Coffee</button>
+        </div>
+        <div>
+            <p>Or something else:</p>
+            <input type="text" id="otherFoodInput" class="styled-input" placeholder="Enter your choice">
+            <button id="otherFoodButton" class="styled-button">Select</button>
+        </div>
+    </div>
+    <div id="congratulations" class="congratulations" style="display: none;">
+        <h1>Congratulations!</h1>
+        <p>You said yes!</p>
+        <div id="confetti-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
