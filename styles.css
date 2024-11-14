@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+.question {
+    margin: 20px;
+}
+
+.yes-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.yes-button:hover {
+    background-color: #45a049;
+}
+
+.no-button {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    animation: moveAround 2s infinite;
+    transition: background-color 0.3s;
+}
+
+.no-button:hover {
+    background-color: #d32f2f;
+}
+
+.moving-button {
+    position: relative;
+}
+
+@keyframes moveAround {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: calc(50vh - 50px);
+        left: calc(100vw - 100px);
+    }
+    50% {
+        top: calc(100vh - 100px);
+        left: 0;
+    }
+    75% {
+        top: 0;
+        left: calc(50vw - 50px);
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+.styled-button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.styled-button:hover {
+    background-color: #007bb5;
+}
+
+.date-picker {
+    padding: 10px;
+    font-size: 14px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.styled-input {
+    padding: 10px;
+    font-size: 14px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.congratulations {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.confetti-particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    animation: confetti-fall linear 5s infinite;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100%) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
