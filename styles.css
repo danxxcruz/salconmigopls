@@ -3,8 +3,11 @@ body {
     text-align: center;
     margin-top: 50px;
     background-color: #f0f0f0;
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    /* position: absolute; */
     align-items: center;
+    min-height: 100vh;
     max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
     margin: 50px auto; /* Centra el cuerpo horizontalmente */
     padding: 20px; /* Añade un poco de relleno para que no quede pegado a los bordes */

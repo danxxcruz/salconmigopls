@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const datePicker = document.getElementById('datePicker');
     const today = new Date().toISOString().split('T')[0];
     datePicker.setAttribute('min', today);
+
+    const audio = document.getElementById('background-audio');
+    audio.play().catch(error => {
+        console.log('Autoplay was prevented:', error);
+    });
 });
 
 document.getElementById('yesButton').addEventListener('click', function() {
