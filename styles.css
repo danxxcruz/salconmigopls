@@ -3,11 +3,31 @@ body {
     text-align: center;
     margin-top: 50px;
     background-color: #f0f0f0;
-    position: relative;
+    position: absolute;
+    align-items: center;
+    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 50px auto; /* Centra el cuerpo horizontalmente */
+    padding: 20px; /* Añade un poco de relleno para que no quede pegado a los bordes */
 }
 
 .question {
-    margin: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-container button {
+    margin: 10px 0;
 }
 
 .yes-button {
@@ -42,7 +62,7 @@ body {
     cursor: pointer;
     border-radius: 5px;
     position: relative;
-    animation: moveAround 2s infinite;
+    /* animation: moveAround 2s infinite; */
     transition: background-color 0.3s;
 }
 
@@ -50,76 +70,63 @@ body {
     background-color: #d32f2f;
 }
 
-.moving-button {
-    position: relative;
+/* .moving-button {
+    position: absolute;
 }
-
-@keyframes moveAround {
-    0% {
-        top: 0;
-        left: 0;
-    }
-    25% {
-        top: calc(50vh - 50px);
-        left: calc(100vw - 100px);
-    }
-    50% {
-        top: calc(100vh - 100px);
-        left: 0;
-    }
-    75% {
-        top: 0;
-        left: calc(50vw - 50px);
-    }
-    100% {
-        top: 0;
-        left: 0;
-    }
-}
+ */
 
 .styled-button {
-    background-color: #008CBA;
+    background-color: #00ba5a;
     border: none;
     color: white;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: bold;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: background-color 0.3s;
 }
 
 .styled-button:hover {
-    background-color: #007bb5;
+    background-color: #226e16;
 }
 
 .date-picker {
     padding: 10px;
     font-size: 14px;
     margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 3px solid #25a336;
+    border-radius: 8px;
 }
 
 .styled-input {
     padding: 10px;
     font-size: 14px;
     margin: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #1ebb21;
     border-radius: 5px;
 }
 
 img {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
+    width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    box-shadow: black;
+}
+
+@media (max-width: 768px) {
+    .question img {
+        width: 300px;
+    }
 }
 
 .congratulations {
-    position: absolute;
+    position: fixed; /* Cambiado a fixed para que se mantenga en la pantalla */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -131,22 +138,23 @@ img {
 }
 
 #confetti-container {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 999;
+    z-index: 9999;
 }
 
 .confetti-particle {
     position: absolute;
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     background-color: #ffcc00;
     border-radius: 50%;
-    animation: confetti-fall linear 5s infinite;
+    animation: confetti-fall linear infinite;
+    opacity: 0.7;
 }
 
 @keyframes confetti-fall {
@@ -155,7 +163,7 @@ img {
         opacity: 1;
     }
     100% {
-        transform: translateY(100vh) rotate(360deg);
+        transform: translateY(100vh) rotate(720deg);
         opacity: 0;
     }
 }
