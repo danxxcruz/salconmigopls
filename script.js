@@ -80,7 +80,7 @@ function showCongratulations() {
     createConfetti();
     setTimeout(() => {
         const whatsappNumber = '+5358778090'; // Replace with the actual number
-        const message = `Vale, vamos a salir! Podemos ir el ${date} en la ${time}. Vamos a por ${food}.`;
+        const message = `Vale, vamos a salir 😅! Me parece bien ir el ${date} en la ${time}. Vamos a por ${food} .`;
         const whatsappLink = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
         window.location.href = whatsappLink;
     }, 2000);
