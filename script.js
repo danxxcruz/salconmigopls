@@ -60,7 +60,9 @@ document.getElementById('otherFoodButton').addEventListener('click', function() 
 
 document.querySelectorAll('#question4 button').forEach(button => {
     button.addEventListener('click', function() {
-        food = button.value;
+        if (!food) {
+            food = button.value;
+        }
         showCongratulations();
     });
 });
