@@ -13,6 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+function formatDateToNaturalLanguage(dateString) {
+    const date = new Date(dateString);
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    return date.toLocaleDateString('es-ES', options);
+}
+
 document.getElementById('yesButton').addEventListener('click', function() {
     document.getElementById('question1').style.display = 'none';
     document.getElementById('question2').style.display = 'block';
@@ -29,8 +35,9 @@ document.getElementById('noButton').addEventListener('click', function() {
 });
 
 document.getElementById('dateSelectButton').addEventListener('click', function() {
-    date = document.getElementById('datePicker').value;
-    if (date) {
+    const dateInput = document.getElementById('datePicker').value;
+    if (dateInput) {
+        date = formatDateToNaturalLanguage(dateInput);
         document.getElementById('question2').style.display = 'none';
         document.getElementById('question3').style.display = 'block';
         window.scrollTo(0, 0);
